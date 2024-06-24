@@ -32,12 +32,12 @@ public class MetricsAspect {
     private StorageContext storageContext;
 
     private long startTime;
-    @Before("execution(* com.kino.study.demo1.controller.TestController.*(..))")
+    @Before("execution(* com.kino.study.demo1.controller.MetricsController.*(..))")
     public void before(JoinPoint joinPoint) {
         startTime = System.currentTimeMillis();
     }
 
-    @After("execution(* com.kino.study.demo1.controller.TestController.*(..))")
+    @After("execution(* com.kino.study.demo1.controller.MetricsController.*(..))")
     public void after(JoinPoint joinPoint) {
         long endTime = System.currentTimeMillis();
         String currentValue = (endTime - startTime) + "";

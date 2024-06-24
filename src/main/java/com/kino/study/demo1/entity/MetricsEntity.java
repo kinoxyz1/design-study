@@ -7,19 +7,19 @@ package com.kino.study.demo1.entity;
  */
 public class MetricsEntity {
     // 响应时间的最大值
-    private Double max;
+    private double max;
     // 最小值
-    private Double mix;
+    private double mix;
     // 和
-    private Double sum;
+    private double sum;
     // 平均值
-    private Double avg;
+    private double avg;
     // 百分位值
-    private Double percentile;
+    private double percentile;
     // 接口调用次数
     private Integer count;
     // 频率
-    private Double tps;
+    private double tps;
     // 可扩展...
 
     @Override
@@ -35,43 +35,43 @@ public class MetricsEntity {
                 '}';
     }
 
-    public Double getMax() {
+    public double getMax() {
         return max;
     }
 
-    public void setMax(Double max) {
+    public void setMax(double max) {
         this.max = max;
     }
 
-    public Double getMix() {
+    public double getMix() {
         return mix;
     }
 
-    public void setMix(Double mix) {
+    public void setMix(double mix) {
         this.mix = mix;
     }
 
-    public Double getSum() {
+    public double getSum() {
         return sum;
     }
 
-    public void setSum(Double sum) {
+    public void setSum(double sum) {
         this.sum = sum;
     }
 
-    public Double getAvg() {
+    public double getAvg() {
         return avg;
     }
 
-    public void setAvg(Double avg) {
+    public void setAvg(double avg) {
         this.avg = avg;
     }
 
-    public Double getPercentile() {
+    public double getPercentile() {
         return percentile;
     }
 
-    public void setPercentile(Double percentile) {
+    public void setPercentile(double percentile) {
         this.percentile = percentile;
     }
 
@@ -83,11 +83,11 @@ public class MetricsEntity {
         this.count = count;
     }
 
-    public Double getTps() {
+    public double getTps() {
         return tps;
     }
 
-    public void setTps(Double tps) {
+    public void setTps(double tps) {
         this.tps = tps;
     }
 }

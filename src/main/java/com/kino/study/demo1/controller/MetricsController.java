@@ -11,7 +11,7 @@ import java.util.Random;
  */
 @Controller
 @RequestMapping
-public class TestController {
+public class MetricsController {
     @RequestMapping("/test")
     public String test1(){
         try {
