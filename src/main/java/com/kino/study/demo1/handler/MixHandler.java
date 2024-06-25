@@ -1,22 +1,22 @@
-package com.kino.study.demo1.handle;
+package com.kino.study.demo1.handler;
 
 import com.kino.study.demo1.entity.MetricsEntity;
-import com.kino.study.demo1.statistical.PercentileStatistical;
+import com.kino.study.demo1.statistical.MixStatistical;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
  * @author kino
- * @date 2024/6/25 00:59
+ * @date 2024/6/25 00:58
  */
 @Component
-public class PercentileHandler implements MetricsHandler {
+public class MixHandler implements MetricsHandler {
 
     @Autowired
-    private PercentileStatistical percentile;
+    private MixStatistical mix;
 
     @Override
     public void handle(MetricsEntity metrics, double currentValue) {
-        metrics.setPercentile(percentile.calculation(currentValue));
+        metrics.setMix(mix.calculation(currentValue));
     }
 }

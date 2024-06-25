@@ -1,22 +1,22 @@
-package com.kino.study.demo1.handle;
+package com.kino.study.demo1.handler;
 
 import com.kino.study.demo1.entity.MetricsEntity;
-import com.kino.study.demo1.statistical.TpsStatistical;
+import com.kino.study.demo1.statistical.SumStatistical;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
  * @author kino
- * @date 2024/6/25 01:01
+ * @date 2024/6/25 01:00
  */
 @Component
-public class TpsHandler implements MetricsHandler {
+public class SumHandler implements MetricsHandler {
 
     @Autowired
-    private TpsStatistical tps;
+    private SumStatistical sum;
 
     @Override
     public void handle(MetricsEntity metrics, double currentValue) {
-        metrics.setTps(tps.calculation(currentValue));
+        metrics.setSum(sum.calculation(currentValue));
     }
 }

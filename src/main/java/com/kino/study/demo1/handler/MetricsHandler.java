@@ -1,4 +1,4 @@
-package com.kino.study.demo1.handle;
+package com.kino.study.demo1.handler;
 
 import com.kino.study.demo1.entity.MetricsEntity;
 

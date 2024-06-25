@@ -1,7 +1,7 @@
 package com.kino.study.demo1.aspect;
 
 import com.kino.study.demo1.entity.MetricsEntity;
-import com.kino.study.demo1.handle.MetricsHandler;
+import com.kino.study.demo1.handler.MetricsHandler;
 import com.kino.study.demo1.storage.StorageContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -52,16 +52,14 @@ public class MetricsAspect {
         for (int i = 1; i < stackTrace.length; i++) {
             StackTraceElement ste = stackTrace[i];
 
-            if (ste.getClassName().contains("com.jzdata") && ste.getClassName().contains("CGLIB$$")
+            if (ste.getClassName().contains("com.kino") && ste.getClassName().contains("CGLIB$$")
                     && !ste.getClassName().contains("java.lang.Thread")
                     // && !ste.getClassName().contains("org.springframework.cglib.proxy.MethodProxy")
                     && !ste.getClassName().equals(this.getClass().getName())) {
                 logger.info("class name: {}, count: {}",ste.getClassName() , metricsEntity.toString());
             }
         }
-
         storageContext.save(metricsEntity);
-
     }
 
 
