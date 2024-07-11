@@ -47,6 +47,10 @@
             <version>1.7.30</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

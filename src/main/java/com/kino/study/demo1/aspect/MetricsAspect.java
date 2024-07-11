@@ -2,6 +2,7 @@ package com.kino.study.demo1.aspect;
 
 import com.kino.study.demo1.entity.MetricsEntity;
 import com.kino.study.demo1.handler.MetricsHandler;
+import com.kino.study.demo1.output.OutputContext;
 import com.kino.study.demo1.storage.StorageContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -30,6 +31,8 @@ public class MetricsAspect {
     private List<MetricsHandler> handler;
     @Autowired
     private StorageContext storageContext;
+    @Autowired
+    private OutputContext outputContext;
 
     private long startTime;
     @Before("execution(* com.kino.study.demo1.controller.MetricsController.*(..))")
@@ -60,6 +63,7 @@ public class MetricsAspect {
             }
         }
         storageContext.save(metricsEntity);
+        outputContext.output(metricsEntity);
     }
 
 
