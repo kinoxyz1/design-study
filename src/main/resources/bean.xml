@@ -1,0 +1,12 @@
+<beans>
+    <bean id="user" class="com.kino.study.factory.di.bean.User">
+        <constructor-arg type="String" value="a12345678" />
+        <constructor-arg type="String" value="kino" />
+        <constructor-arg type="int" value="18" />
+    </bean>
+    <bean id="teacher" class="com.kino.study.factory.di.bean.Teacher">
+        <constructor-arg type="String" value="a123456781" />
+        <constructor-arg type="String" value="kino" />
+        <constructor-arg type="int" value="18" />
+    </bean>
+</beans>
