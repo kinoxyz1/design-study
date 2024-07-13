@@ -1,6 +1,6 @@
 package com.kino.study.demo1;
 
-import com.kino.study.demo1.statistical.AvgStatistical;
+import com.kino.study.factory.demo1.statistical.AvgStatistical;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
